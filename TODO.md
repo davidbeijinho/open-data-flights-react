@@ -13,3 +13,5 @@ TODO
         * departure
         * destination
     * countrys
+* add more npm script to the lib files
+* remove some magic string in the lib part

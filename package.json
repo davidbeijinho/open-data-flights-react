@@ -24,7 +24,9 @@
     "prettierClient": "prettier lib/**.js --write",
     "prettierClient:check": "prettier --check lib/**.js",
     "prettierNode": "prettier lib/**.js --write",
-    "prettierNode:check": "prettier --check lib/**.js"
+    "prettierNode:check": "prettier --check lib/**.js",
+    "parser": "node ./lib/parser.js",
+    "reader": "node ./lib/reader.js"
   },
   "eslintConfig": {
     "extends": "react-app"
