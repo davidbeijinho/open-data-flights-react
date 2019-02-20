@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Datamap from 'datamaps';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 
 class App extends Component {
 
-  // var map = new Datamap({
-  //   element: document.getElementById('container'),
-  //   scope: 'usa'
-  // });
   drawMap() {
     console.log(document.getElementById('container'));
-    var map = new Datamap({
+    new Datamap({
       element: document.getElementById('container'),
-      scope: 'usa'
+      // scope: 'usa'
+      geographyConfig: {
+        highlightOnHover: false,
+        popupOnHover: false
+    }
     });
   }
 
@@ -41,7 +41,7 @@ class App extends Component {
       //     </a>
       //   </header>
       // </div>
-      <div id="container"></div>
+      <div id="container"  style={{position: 'absolute', width: '100%', height:'100%'}} ></div>
     );
   }
 }
