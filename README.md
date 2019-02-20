@@ -1,6 +1,7 @@
 Some data visualization
 
-data source:
+Data source:
+
 Detailed air passenger transport by reporting country and routes 
 
 https://ec.europa.eu/eurostat/data/database?node_code=avia_par
@@ -53,6 +54,7 @@ https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?fil
 
 
 Measure
+
 	PAS_BRD	    Passengers on board
 	PAS_BRD_ARR	Passengers on board (arrivals)
 	PAS_BRD_DEP	Passengers on board (departures)
@@ -67,11 +69,13 @@ Measure
 	CAF_PAS_DEP	Commercial passenger air flights (departures)
 
 UNIT
+
     PAS	Passenger
 	FLIGHT	Flight
 	SEAT	Seats and berths
 
 
-to have a look
+To have a look:
+
 	https://github.com/btmills/react-datamaps
 
