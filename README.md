@@ -1,4 +1,4 @@
-some data visualization
+Some data visualization
 
 data source:
 Detailed air passenger transport by reporting country and routes 
@@ -51,7 +51,7 @@ https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?fil
 https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/avia_par_tr.tsv.gz
 
 
-TODO , split files by this
+
 Measure
 	PAS_BRD	    Passengers on board
 	PAS_BRD_ARR	Passengers on board (arrivals)
@@ -70,3 +70,8 @@ UNIT
     PAS	Passenger
 	FLIGHT	Flight
 	SEAT	Seats and berths
+
+
+to have a look
+	https://github.com/btmills/react-datamaps
+
