@@ -76,6 +76,9 @@ UNIT
 
 
 To have a look:
-
+	https://github.com/markmarkoh/datamaps
 	https://github.com/btmills/react-datamaps
 
+
+arc animation
+http://datamaps.github.io/old

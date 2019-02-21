@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
 import Datamap from 'datamaps';
-// import logo from './logo.svg';
-// import './App.css';
+import './App.css';
+
+import { airports, colors } from './lib/airports';
 
 class App extends Component {
-
   drawMap() {
-    console.log(document.getElementById('container'));
-    new Datamap({
+    console.log(colors);
+    const map = new Datamap({
+      //   height: '100%', //if not null, datamaps will grab the height of 'element'
+      // width: '100%',
+      responsive: true,
       element: document.getElementById('container'),
       // scope: 'usa'
       geographyConfig: {
         highlightOnHover: false,
         popupOnHover: false
-    }
+      },
+      fills: {
+        defaultFill: '#ABDDA4',
+        ...colors
+      },
+      // bubblesConfig: {
+      //   borderWidth: 0,
+      //   borderOpacity: 0,
+      //   fillOpacity: 0.75,
+      // }
     });
+    map.bubbles(airports);
   }
 
   componentDidMount() {
@@ -22,27 +35,8 @@ class App extends Component {
     this.drawMap();
   }
 
-
   render() {
-    return (
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      // </div>
-      <div id="container"  style={{position: 'absolute', width: '100%', height:'100%'}} ></div>
-    );
+    return <div id="container" />;
   }
 }
 
