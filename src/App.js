@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import Datamap from 'datamaps';
+import DropDown from './components/DropDown';
+import { countryList } from './lib/countries';
+import measure  from './config/measures.json';
 import './App.css';
 
-import { airports, colors } from './lib/airports';
-import { routes } from './lib/routes';
+import { createAirports, colors } from './lib/airports';
+import { getRoutes } from './lib/routes';
 let map;
+const airports = createAirports();
+
 class App extends Component {
   state = {
     routes: false,
-    airports: false
+    airports: false,
+    country: '',
+    measure: '',
   };
   drawMap() {
     console.log(colors);
     map = new Datamap({
-      //   height: '100%', //if not null, datamaps will grab the height of 'element'
-      // width: '100%',
       responsive: true,
       element: document.getElementById('container'),
-      // scope: 'usa'
       geographyConfig: {
         highlightOnHover: false,
         popupOnHover: false
@@ -26,11 +30,6 @@ class App extends Component {
         defaultFill: '#ABDDA4',
         ...colors
       }
-      // bubblesConfig: {
-      //   borderWidth: 0,
-      //   borderOpacity: 0,
-      //   fillOpacity: 0.75,
-      // }
     });
   }
 
@@ -38,7 +37,15 @@ class App extends Component {
     if (this.state.routes) {
       map.arc([]);
     } else {
-      map.arc(routes);
+      // const routes= 
+      getRoutes({
+        measure: this.state.measure,
+        country: this.state.country,
+      }).then((d) =>{ 
+        // return d
+        map.arc(d);
+      });
+      
     }
     this.setState({ routes: !this.state.routes });
   }
@@ -56,10 +63,30 @@ class App extends Component {
     this.drawMap();
   }
 
+  onChangeCountry(data) {
+    this.setState({country: data});
+  }
+
+  onChangeMeasure(data) {
+    this.setState({measure: data});
+  }
+
   render() {
     return (
       <div>
         <div id="container" />
+        <DropDown
+          id="countries"
+          label="select country"
+          list={countryList}
+          onUpdate={(d) => {this.onChangeCountry(d)}}
+        />
+           <DropDown
+          id="measures"
+          label="select measure"
+          list={measure}
+          onUpdate={(d) => {this.onChangeMeasure(d)}}
+        />
         <button
           onClick={() => {
             this.drawRoutes();
