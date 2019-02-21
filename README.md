@@ -10,7 +10,7 @@ Detailed air passenger transport by reporting country and routes
 
 
 
-## URL to download
+## Example url to download
 
 	https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/avia_par_be.tsv.gz
 
@@ -58,36 +58,40 @@ Detailed air passenger transport by reporting country and routes
 
 
 ## Airport information
-
-	https://openflights.org/data.html#airport
+	
+	Info:
+	https://datahub.io/core/airport-codes
 	
 	File Url:
-	https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat
+	https://datahub.io/core/airport-codes/r/airport-codes.json
 
 
 ### Airports file information
 
-| key       | Name       | Description                                                                                                                                                                   |
-| --------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id        | Airport ID | Unique OpenFlights identifier for this airport.                                                                                                                               |
-| name      | Name       | Name of airport. May or may not contain the City name.                                                                                                                        |
-| city      | City       | Main city served by airport. May be spelled differently from Name.                                                                                                            |
-| country   | Country    | Country or territory where airport is located. See countries.dat to cross-reference to ISO 3166-1 codes.                                                                      |
-| IATA      | IATA       | 3-letter IATA code. Null if not assigned/unknown.                                                                                                                             |
-| ICAO      | ICAO       | 4-letter ICAO code. Null if not assigned.                                                                                                                                     |
-| latitude  | Latitude   | Decimal degrees, usually to six significant digits. Negative is South, positive is North.                                                                                     |
-| longitude | Longitude  | Decimal degrees, usually to six significant digits. Negative is West, positive is East.                                                                                       |
-| altitude  | Altitude   | In feet.                                                                                                                                                                      |
-| timezone  | Timezone   | Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5.                                                                                          |
-| DST       | DST        | Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown). See also: Help: Time  database time zone |
-| tz        | Tz         | Timezone in "tz" (Olson) format, eg. "America/Los_Angeles".                                                                                                                   |
-| type      | Type       | Type of the airport. Value "airport" for air terminals, "station" for train stations, "port" for ferry terminals and "unknown" if not known.                                  |
-| source    | Source     | Source of this data. "OurAirports" for data sourced from OurAirports, "Legacy" for old data, "User" for unverified user contributions.                                        |
+
+| Field Name   | Order | Type (Format)    | Description              |
+| ------------ | ----- | ---------------- | ------------------------ |
+| ident        | 1     | string (default) | 4-letter ICAO code.      |
+| type         | 2     | string (default) | type of the airport      |
+| name         | 3     | string (default) | name of the airport      |
+| elevation_ft | 4     | string (default) | elevantion in feets      |
+| continent    | 5     | string (default) | continet code or NA      |
+| iso_country  | 6     | string (default) | iso country code         |
+| iso_region   | 7     | string (default) | iso code region          |
+| municipality | 8     | string (default) | name of the municipality |
+| gps_code     | 9     | string (default) | ???                      |
+| iata_code    | 10    | string (default) | iata code                |
+| local_code   | 11    | string (default) | ???                      |
+| coordinates  | 12    | string (default) | latitude, longitude      |
+
 
 
 ## Countries Information
-
+	
+	Info:
 	https://datahub.io/core/country-list
+
+	File Url:
 	https://datahub.io/core/country-list/r/data.json
 	 	
 ### Coutries data format

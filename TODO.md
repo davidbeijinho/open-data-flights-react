@@ -17,3 +17,5 @@ TODO
     * countrys
 * X add more npm script to the lib files
 * remove some magic string in the lib part
+* get filterd file list of coutries with all information
+* get filterd file airport list
