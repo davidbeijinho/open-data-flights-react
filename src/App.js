@@ -6,7 +6,10 @@ import { airports, colors } from './lib/airports';
 import { routes } from './lib/routes';
 let map;
 class App extends Component {
- 
+  state = {
+    routes: false,
+    airports: false
+  };
   drawMap() {
     console.log(colors);
     map = new Datamap({
@@ -29,16 +32,27 @@ class App extends Component {
       //   fillOpacity: 0.75,
       // }
     });
-    map.bubbles(airports);
   }
 
-  onClick() {
-    console.log('uaaaaaa');
-    map.arc( routes, {strokeWidth: 2});
+  drawRoutes() {
+    if (this.state.routes) {
+      map.arc([]);
+    } else {
+      map.arc(routes);
+    }
+    this.setState({ routes: !this.state.routes });
+  }
+
+  drawAirports() {
+    if (this.state.airports) {
+      map.bubbles([]);
+    } else {
+      map.bubbles(airports);
+    }
+    this.setState({ airports: !this.state.airports });
   }
 
   componentDidMount() {
-    console.log('MOUNTTT');
     this.drawMap();
   }
 
@@ -46,7 +60,20 @@ class App extends Component {
     return (
       <div>
         <div id="container" />
-        <button onClick={this.onClick}>+</button>
+        <button
+          onClick={() => {
+            this.drawRoutes();
+          }}
+        >
+          Routes
+        </button>
+        <button
+          onClick={() => {
+            this.drawAirports();
+          }}
+        >
+          Airports
+        </button>
       </div>
     );
   }
