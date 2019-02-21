@@ -24,4 +24,10 @@ const airports = airportsData.map((value, index) => {
   };
 });
 
-export { airports, colors };
+function getAirportById(id) {
+  return airportsData.filter(value => {
+    return value.ident === id;
+  });
+}
+
+export { airports, colors, getAirportById };
