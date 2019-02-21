@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "csv-parse": "^4.3.3",
     "datamaps": "^0.5.9",
     "multi-progress": "^2.0.0",
     "react": "^16.8.2",
@@ -26,9 +27,11 @@
     "prettierClient:check": "prettier --check lib/**.js",
     "prettierNode": "prettier lib/**.js --write",
     "prettierNode:check": "prettier --check lib/**.js",
-    "parser": "node ./lib/parser.js",
+    "parseData": "node ./lib/parseData.js",
     "reader": "node ./lib/reader.js",
-    "downloadData": "node ./lib/downloadData.js"
+    "decompress": "node ./lib/decompress.js",
+    "downloadData": "node ./lib/downloadData.js",
+    "downloadAirports": "node ./lib/downloadAirports.js"
   },
   "eslintConfig": {
     "extends": "react-app"
