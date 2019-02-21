@@ -1,0 +1,22 @@
+{
+  "decompressData": {
+    "sourceFolder": "./data/downloaded/",
+    "destinationFolder": "./data/raw/",
+    "compressedExtension": ".tsv.gz",
+    "decompressedExtension": ".tsv"
+  },
+  "downloadData": {
+    "destinationFolder": "./data/downloaded/"
+  },
+  "parseData": {
+    "sourceFolder": "./data/raw/",
+    "destinationFolder": "./data/processed/",
+    "originalExtension": ".tsv",
+    "parseddExtension": ".json"
+  },
+  "airportsData": {
+    "url": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat",
+    "destinationFolder": "./data/",
+    "fileName": "airports.dat"
+  }
+}

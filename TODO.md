@@ -1,10 +1,12 @@
 TODO
 
 * Split files by Measure type
-* import some json file to react
-* import airports data
-* draw an aiport
-* draw a connection
+* X import some json file to react
+* X import airports data
+* X draw an aiport
+* draw airport from map
+* X draw a connection
+* draw a connection from file
 * draw a table
 * create filters
     * measure type
@@ -13,5 +15,5 @@ TODO
         * departure
         * destination
     * countrys
-* add more npm script to the lib files
+* X add more npm script to the lib files
 * remove some magic string in the lib part

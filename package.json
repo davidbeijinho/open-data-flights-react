@@ -29,7 +29,7 @@
     "prettierNode:check": "prettier --check lib/**.js",
     "parseData": "node ./lib/parseData.js",
     "reader": "node ./lib/reader.js",
-    "decompress": "node ./lib/decompress.js",
+    "decompressData": "node ./lib/decompressData.js",
     "downloadData": "node ./lib/downloadData.js",
     "downloadAirports": "node ./lib/downloadAirports.js"
   },
