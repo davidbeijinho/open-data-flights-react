@@ -16,8 +16,8 @@
   },
   "airportsData": {
     "url": "https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/8186dbf85b9c3718c872f592c3aac9d9/airport-codes_json.json",
-    "destinationFolder": "./data/",
-    "fileName": "airports.json"
+    "destinationFolder": "./data/airports/",
+    "fileName": "all-airports.json"
   },
   "activeAirports": {
     "sourceFolder": "./data/processed/",
@@ -28,5 +28,10 @@
   "activeCountries": {
     "destinationFolder": "./data/airports",
     "fileName":"./data/countries/countries.json"
+  },
+  "countriesData": {
+    "url":"https://pkgstore.datahub.io/core/country-list/data_json/data/8c458f2d15d9f2119654b29ede6e45b8/data_json.json",
+    "destinationFolder": "./data/countries/",
+    "fileName": "all-countries.json"
   }
 }

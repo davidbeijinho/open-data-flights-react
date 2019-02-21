@@ -36,7 +36,8 @@
     "reader": "node ./lib/reader.js",
     "decompressData": "node ./lib/decompressData.js",
     "downloadData": "node ./lib/downloadData.js",
-    "downloadAirports": "node ./lib/downloadAirports.js"
+    "downloadAirports": "node ./lib/downloadAirports.js",
+    "downloadCountries": "node ./lib/downloadCountries.js"
   },
   "eslintConfig": {
     "extends": "react-app"
