@@ -21,6 +21,12 @@
   },
   "activeAirports": {
     "sourceFolder": "./data/processed/",
-    "destinationFolder": "./data/airports"
+    "destinationFolder": "./data/airports",
+    "deparuteFileName":"./data/airports/departure.json",
+    "arrivalFileName":"./data/airports/arrival.json"
+  },
+  "activeCountries": {
+    "destinationFolder": "./data/airports",
+    "fileName":"./data/countries/countries.json"
   }
 }
