@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "datamaps": "^0.5.9",
+    "multi-progress": "^2.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5"
@@ -26,7 +27,8 @@
     "prettierNode": "prettier lib/**.js --write",
     "prettierNode:check": "prettier --check lib/**.js",
     "parser": "node ./lib/parser.js",
-    "reader": "node ./lib/reader.js"
+    "reader": "node ./lib/reader.js",
+    "downloadData": "node ./lib/downloadData.js"
   },
   "eslintConfig": {
     "extends": "react-app"
