@@ -8,7 +8,7 @@
   "downloadRoutes": {
     "destinationFolder": "./data/downloaded/"
   },
-  "parseData": {
+  "parseRoutes": {
     "sourceFolder": "./data/raw/",
     "destinationFolder": "./data/processed/",
     "originalExtension": ".tsv",
