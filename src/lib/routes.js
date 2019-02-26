@@ -10,18 +10,18 @@ function getRoutes(data) {
       const range = createRange(routesdData);
       return routesdData
         .map(value => {
-          const departureAiport = getAirportById(value.departureAiport);
-          const arrivalAiport = getAirportById(value.arrivalAiport);
+          const departureAirport = getAirportById(value.departureAirport);
+          const arrivalAirport = getAirportById(value.arrivalAirport);
 
-          if (departureAiport.length && arrivalAiport.length) {
+          if (departureAirport.length && arrivalAirport.length) {
             return {
               origin: {
-                latitude: departureAiport[0].latitude,
-                longitude: departureAiport[0].longitude
+                latitude: departureAirport[0].latitude,
+                longitude: departureAirport[0].longitude
               },
               destination: {
-                latitude: arrivalAiport[0].latitude,
-                longitude: arrivalAiport[0].longitude
+                latitude: arrivalAirport[0].latitude,
+                longitude: arrivalAirport[0].longitude
               },
               options: {
                 strokeWidth: range(parseInt(value[key])),

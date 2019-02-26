@@ -3,7 +3,7 @@ TODO
 * Split files by Measure type
 * X import some json file to react
 * X import airports data
-* X draw an aiport
+* X draw an airport
 * draw airport from map
 * X draw a connection
 * draw a connection from file
