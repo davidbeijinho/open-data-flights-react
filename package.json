@@ -10,6 +10,7 @@
     "lodash.uniq": "^4.5.0",
     "lodash.uniqby": "^4.7.0",
     "multi-progress": "^2.0.0",
+    "progress-stream": "^2.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5"
@@ -36,10 +37,11 @@
     "generateFiltredAirports": "node ./lib/generateFiltredAirports.js",
     "processFiltredAirports": "node ./lib/processFiltredAirports.js",
     "reader": "node ./lib/reader.js",
-    "decompressData": "node ./lib/decompressData.js",
-    "downloadData": "node ./lib/downloadData.js",
+    
+    "downloadRoutes": "node ./lib/downloadRoutes.js",
     "downloadAirports": "node ./lib/downloadAirports.js",
-    "downloadCountries": "node ./lib/downloadCountries.js"
+    "downloadCountries": "node ./lib/downloadCountries.js",
+    "decompressRoutes": "node ./lib/decompressRoutes.js"
   },
   "eslintConfig": {
     "extends": "react-app"

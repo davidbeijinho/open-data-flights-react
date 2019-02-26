@@ -1,11 +1,11 @@
 {
-  "decompressData": {
+  "decompressRoutes": {
     "sourceFolder": "./data/downloaded/",
     "destinationFolder": "./data/raw/",
     "compressedExtension": ".tsv.gz",
     "decompressedExtension": ".tsv"
   },
-  "downloadData": {
+  "downloadRoutes": {
     "destinationFolder": "./data/downloaded/"
   },
   "parseData": {
