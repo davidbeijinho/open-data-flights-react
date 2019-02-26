@@ -13,7 +13,8 @@
     "progress-stream": "^2.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "stream-transform": "^1.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,12 +33,10 @@
     "prettierClient:check": "prettier --check lib/**.js",
     "prettierNode": "prettier lib/**.js --write",
     "prettierNode:check": "prettier --check lib/**.js",
-    
     "generateActiveAirports": "node ./lib/generateActiveAirports.js",
     "generateFiltredAirports": "node ./lib/generateFiltredAirports.js",
     "processFiltredAirports": "node ./lib/processFiltredAirports.js",
     "reader": "node ./lib/reader.js",
-    
     "downloadRoutes": "node ./lib/downloadRoutes.js",
     "downloadAirports": "node ./lib/downloadAirports.js",
     "downloadCountries": "node ./lib/downloadCountries.js",
