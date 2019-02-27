@@ -19,3 +19,5 @@ TODO
 * remove some magic string in the lib part
 * get filterd file list of coutries with all information
 * get filterd file airport list
+
+write json stream?
