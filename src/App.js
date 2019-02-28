@@ -65,7 +65,6 @@ class App extends Component {
   }
 
   onChangeCountry(data) {
-    console.log(data);
     this.setState({ country: data });
   }
 
@@ -83,6 +82,7 @@ class App extends Component {
         <div id="container" />
         <DropDown
           id="countries"
+          value={this.state.country}
           label="select country"
           list={countryList}
           onUpdate={d => {
@@ -91,6 +91,7 @@ class App extends Component {
         />
         <DropDown
           id="years"
+          value={this.state.year}
           label="select year"
           list={yearsList}
           onUpdate={d => {
@@ -99,6 +100,7 @@ class App extends Component {
         />
         <DropDown
           id="measures"
+          value={this.state.measure}
           label="select measure"
           list={measure}
           onUpdate={d => {
