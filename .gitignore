@@ -25,3 +25,5 @@ yarn-error.log*
 /data/processed/**
 /data/downloaded/**
 /data/raw/**
+/data/airports/**
+/data/countries/**
