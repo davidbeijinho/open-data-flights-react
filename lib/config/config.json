@@ -12,7 +12,8 @@
     "sourceFolder": "./data/raw/",
     "destinationFolder": "./data/processed/",
     "originalExtension": ".tsv",
-    "parseddExtension": ".json"
+    "parseddExtension": ".json",
+    "filedWhiteList": ["departure", "arrival", "unit", "tra_meas"]
   },
   "airportsData": {
     "url": "https://pkgstore.datahub.io/core/airport-codes/airport-codes_json/data/8186dbf85b9c3718c872f592c3aac9d9/airport-codes_json.json",
@@ -24,17 +25,17 @@
     "destinationFolder": "./data/countries/",
     "fileName": "all-countries.json"
   },
-  "filtredAirports" : {
+  "filtredAirports": {
     "routesSourceFolder": "./data/processed/",
-    "sourceActiveFileName":"./data/airports/active-airports.json",
-    "sourceAirportsDataFileName":"./data/airports/all-airports.json",
-    "filtredFileName":"./data/airports/filtred-airports.json",
-    "missingFileName":"./data/airports/missing-airports.json"
+    "sourceActiveFileName": "./data/airports/active-airports.json",
+    "sourceAirportsDataFileName": "./data/airports/all-airports.json",
+    "filtredFileName": "./data/airports/filtred-airports.json",
+    "missingFileName": "./data/airports/missing-airports.json"
   },
-  "filtredCountries" : {
-    "filtredAirportsFileName":"./data/airports/filtred-airports.json",
-    "countriesFileName":"./data/countries/all-countries.json",
-    "filtredFileName":"./data/countries/filtred-countries.json",
-    "missingFileName":"./data/countries/missing-countries.json"
+  "filtredCountries": {
+    "filtredAirportsFileName": "./data/airports/filtred-airports.json",
+    "countriesFileName": "./data/countries/all-countries.json",
+    "filtredFileName": "./data/countries/filtred-countries.json",
+    "missingFileName": "./data/countries/missing-countries.json"
   }
 }
