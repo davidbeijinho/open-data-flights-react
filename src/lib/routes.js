@@ -1,17 +1,15 @@
 import { getAirportById } from './airports';
 import d3 from 'd3';
 
-const key = '2000';
-
 function getRoutes(data) {
   return fetch(getFileUrl(data))
     .then(response => response.json())
     .then(function(routesdData) {
-      const range = createRange(routesdData);
+      const range = createRange(routesdData, data.year);
       return routesdData
         .map(value => {
-          const departureAirport = getAirportById(value.departureAirport);
-          const arrivalAirport = getAirportById(value.arrivalAirport);
+          const departureAirport = getAirportById(value.departure.airport);
+          const arrivalAirport = getAirportById(value.arrival.airport);
 
           if (departureAirport.length && arrivalAirport.length) {
             return {
@@ -24,7 +22,7 @@ function getRoutes(data) {
                 longitude: arrivalAirport[0].longitude
               },
               options: {
-                strokeWidth: range(parseInt(value[key])),
+                strokeWidth: range(parseInt(value[data.year])),
                 strokeColor: 'rgba(100, 10, 200, 0.4)',
                 greatArc: true
               }
@@ -36,7 +34,7 @@ function getRoutes(data) {
     });
 }
 
-function createRange(data) {
+function createRange(data, key) {
   const values = data.map(v => parseInt(v[key])).filter(v => v);
 
   return d3.scale

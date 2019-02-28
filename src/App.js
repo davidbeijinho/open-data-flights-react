@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Datamap from 'datamaps';
 import DropDown from './components/DropDown';
 import { countryList } from './lib/countries';
-import measure  from './config/measures.json';
+import { yearsList } from './lib/years';
+import measure from './config/measures.json';
 import './App.css';
 
 import { createAirports, colors } from './lib/airports';
@@ -14,11 +15,11 @@ class App extends Component {
   state = {
     routes: false,
     airports: false,
-    country: '',
-    measure: '',
+    country: countryList[0].value,
+    measure: measure[0].value,
+    year: yearsList[0].value
   };
   drawMap() {
-    console.log(colors);
     map = new Datamap({
       responsive: true,
       element: document.getElementById('container'),
@@ -37,15 +38,15 @@ class App extends Component {
     if (this.state.routes) {
       map.arc([]);
     } else {
-      // const routes= 
+      // const routes=
       getRoutes({
         measure: this.state.measure,
         country: this.state.country,
-      }).then((d) =>{ 
+        year: this.state.year
+      }).then(d => {
         // return d
         map.arc(d);
       });
-      
     }
     this.setState({ routes: !this.state.routes });
   }
@@ -64,11 +65,16 @@ class App extends Component {
   }
 
   onChangeCountry(data) {
-    this.setState({country: data});
+    console.log(data);
+    this.setState({ country: data });
   }
 
   onChangeMeasure(data) {
-    this.setState({measure: data});
+    this.setState({ measure: data });
+  }
+
+  onChangeYear(data) {
+    this.setState({ year: data });
   }
 
   render() {
@@ -79,13 +85,25 @@ class App extends Component {
           id="countries"
           label="select country"
           list={countryList}
-          onUpdate={(d) => {this.onChangeCountry(d)}}
+          onUpdate={d => {
+            this.onChangeCountry(d);
+          }}
         />
-           <DropDown
+        <DropDown
+          id="years"
+          label="select year"
+          list={yearsList}
+          onUpdate={d => {
+            this.onChangeYear(d);
+          }}
+        />
+        <DropDown
           id="measures"
           label="select measure"
           list={measure}
-          onUpdate={(d) => {this.onChangeMeasure(d)}}
+          onUpdate={d => {
+            this.onChangeMeasure(d);
+          }}
         />
         <button
           onClick={() => {

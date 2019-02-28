@@ -1,4 +1,4 @@
-import airportsData from '../data/airports/front-filtred-airports.json';
+import airportsData from '../data/airports/filtred-airports.json';
 import d3 from 'd3';
 
 // const color_scale = d3.scale.linear().domain([0, airportsData.length]).range(['beige', 'red']);

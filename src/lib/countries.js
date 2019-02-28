@@ -1,10 +1,10 @@
-import countries from '../data/countries/countries.json';
+import countries from '../data/countries/filtred-countries.json';
 
 const countryList = countries.map((value) => {
     return {
-        id: value,
-        label: value,
-        value,
+        id: value.code,
+        label: value.name,
+        value: value.code,
     };
 });
 
