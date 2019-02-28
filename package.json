@@ -40,9 +40,9 @@
     "downloadCountries": "node ./lib/downloadCountries.js",
     "decompressRoutes": "node ./lib/decompressRoutes.js",
     "parseRoutes": "node ./lib/parseRoutes.js",
-    "generateActiveAirports": "node ./lib/generateActiveAirports.js",
     "generateAirportsData": "node ./lib/generateAirportsData.js",
-    "generateCountriesData": "node ./lib/generateCountriesData.js"
+    "generateCountriesData": "node ./lib/generateCountriesData.js",
+    "buildData": "npm run downloadRoutes && npm run downloadAirports && npm run downloadCountries &&  npm run decompressRoutes &&  npm run parseRoutes && npm run generateAirportsData && npm run generateCountriesData"
   },
   "eslintConfig": {
     "extends": "react-app"
