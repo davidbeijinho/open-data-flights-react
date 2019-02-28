@@ -34,7 +34,6 @@
     "prettierClient:check": "prettier --check lib/**.js",
     "prettierNode": "prettier lib/**.js --write",
     "prettierNode:check": "prettier --check lib/**.js",
-    "reader": "node ./lib/reader.js",
     "downloadRoutes": "node ./lib/downloadRoutes.js",
     "downloadAirports": "node ./lib/downloadAirports.js",
     "downloadCountries": "node ./lib/downloadCountries.js",
