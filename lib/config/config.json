@@ -19,24 +19,22 @@
     "destinationFolder": "./data/airports/",
     "fileName": "all-airports.json"
   },
-  "activeAirports": {
-    "routesSourceFolder": "./data/processed/",
-    "destinationFileName": "./data/airports/active-airports.json"
-  },
   "countriesData": {
     "url": "https://pkgstore.datahub.io/core/country-list/data_json/data/8c458f2d15d9f2119654b29ede6e45b8/data_json.json",
     "destinationFolder": "./data/countries/",
     "fileName": "all-countries.json"
   },
   "filtredAirports" : {
+    "routesSourceFolder": "./data/processed/",
     "sourceActiveFileName":"./data/airports/active-airports.json",
     "sourceAirportsDataFileName":"./data/airports/all-airports.json",
-    "destinationFileName":"./data/airports/filtred-airports.json"
-  },
-  "processFiltredAirports": {
-    "sourceActiveFileName":"./data/airports/filtred-airports.json",
-    "destinationFileName":"./data/airports/front-filtred-airports.json",
+    "filtredFileName":"./data/airports/filtred-airports.json",
     "missingFileName":"./data/airports/missing-airports.json"
-
+  },
+  "filtredCountries" : {
+    "filtredAirportsFileName":"./data/airports/filtred-airports.json",
+    "countriesFileName":"./data/countries/all-countries.json",
+    "filtredFileName":"./data/countries/filtred-countries.json",
+    "missingFileName":"./data/countries/missing-countries.json"
   }
 }
