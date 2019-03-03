@@ -1,4 +1,4 @@
-import d3 from 'd3';
+import { scaleSqrt } from 'd3-scale';
 import { getAirportById } from './airports';
 
 const getFileUrl = (data) => {
@@ -10,8 +10,7 @@ const getFileUrl = (data) => {
 const createRange = (data, key) => {
   const values = data.map((v) => parseInt(v[key], 10)).filter((v) => v);
 
-  return d3.scale
-    .sqrt()
+  return scaleSqrt()
     .domain([Math.min(...values), Math.max(...values)])
     .range([2, 30]);
 };
@@ -26,7 +25,11 @@ const getRoutes = (data) => {
           const departureAirport = getAirportById(value.departure.airport);
           const arrivalAirport = getAirportById(value.arrival.airport);
 
-          if (departureAirport.length && arrivalAirport.length) {
+          if (
+            departureAirport.length &&
+            arrivalAirport.length &&
+            value[data.year]
+          ) {
             return {
               origin: {
                 latitude: departureAirport[0].latitude,

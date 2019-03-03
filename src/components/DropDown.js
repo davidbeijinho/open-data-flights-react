@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DropDown = ({ id, title, onUpdate, list, value }) => (
+const DropDown = ({ id, label, onUpdate, list, value }) => (
   <React.Fragment>
-    <label htmlFor={id}>{title}</label>
+    <label htmlFor={id}>{label}</label>
     <select
       id={id}
       value={value}
@@ -24,13 +24,15 @@ const DropDown = ({ id, title, onUpdate, list, value }) => (
 
 DropDown.propTypes = {
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   onUpdate: PropTypes.func.isRequired,
-  list: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired
-  }).isRequired,
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired,
   value: PropTypes.string.isRequired
 };
 

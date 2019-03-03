@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import Datamap from 'datamaps';
 
-import Datamap from 'react-datamaps';
+import Datamap from './components/Datamap';
 
 import DropDown from './components/DropDown';
 import countryList from './lib/countries';
@@ -14,21 +14,6 @@ import getRoutes from './lib/routes';
 
 const airportsList = createAirports();
 
-// const setMap = () => {
-//   map = new Datamap({
-//     responsive: true,
-//     element: document.getElementById('container'),
-//     geographyConfig: {
-//       highlightOnHover: false,
-//       popupOnHover: false
-//     },
-//     fills: {
-//       defaultFill: '#ABDDA4',
-//       ...colors
-//     }
-//   });
-// };
-
 class App extends Component {
   state = {
     showRoutes: false,
@@ -39,10 +24,6 @@ class App extends Component {
     measure: measures[0].value,
     year: yearsList[0].value
   };
-
-  componentDidMount() {
-    // setMap();
-  }
 
   onChangeCountry(data) {
     this.setState({ country: data });
@@ -59,18 +40,14 @@ class App extends Component {
   drawRoutes() {
     const { showRoutes, measure, country, year } = this.state;
     if (showRoutes) {
-      // map.arc([]);
       this.setState({ routes: [] });
     } else {
-      // const routes=
       getRoutes({
         measure,
         country,
         year
       }).then((routes) => {
-        // return d
         this.setState({ routes });
-        // map.arc(routes);
       });
     }
     this.setState({ showRoutes: !showRoutes });
@@ -96,11 +73,11 @@ class App extends Component {
             highlightOnHover: false,
             popupOnHover: false
           }}
-          bubbles={airports}
           fills={{
             defaultFill: '#ABDDA4',
             ...colors
           }}
+          bubbles={airports}
           arc={routes}
         />
 
@@ -126,7 +103,7 @@ class App extends Component {
           id="measures"
           value={measure}
           label="select measure"
-          list={measure}
+          list={measures}
           onUpdate={(d) => {
             this.onChangeMeasure(d);
           }}

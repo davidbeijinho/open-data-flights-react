@@ -1,12 +1,12 @@
-import d3 from 'd3';
+import * as d3 from 'd3';
+import { scaleLinear } from 'd3-scale';
 import airportsData from '../data/airports/filtred-airports.json';
 
 // const color_scale = d3.scale.linear().domain([0, airportsData.length]).range(['beige', 'red']);
 const colors = {};
 
 const createColorRange = (limit) => {
-  return d3.scale
-    .linear()
+  return scaleLinear()
     .domain([1, limit])
     .interpolate(d3.interpolateHcl)
     .range([d3.rgb('#007AFF'), d3.rgb('#FFF500')]);
