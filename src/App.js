@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Datamap from 'datamaps';
+// import Datamap from 'datamaps';
+
+import Datamap from 'react-datamaps';
+
 import DropDown from './components/DropDown';
 import countryList from './lib/countries';
 import yearsList from './lib/years';
@@ -9,35 +12,36 @@ import './App.css';
 import { createAirports, colors } from './lib/airports';
 import getRoutes from './lib/routes';
 
-let map;
 const airportsList = createAirports();
 
-const setMap = () => {
-  map = new Datamap({
-    responsive: true,
-    element: document.getElementById('container'),
-    geographyConfig: {
-      highlightOnHover: false,
-      popupOnHover: false
-    },
-    fills: {
-      defaultFill: '#ABDDA4',
-      ...colors
-    }
-  });
-};
+// const setMap = () => {
+//   map = new Datamap({
+//     responsive: true,
+//     element: document.getElementById('container'),
+//     geographyConfig: {
+//       highlightOnHover: false,
+//       popupOnHover: false
+//     },
+//     fills: {
+//       defaultFill: '#ABDDA4',
+//       ...colors
+//     }
+//   });
+// };
 
 class App extends Component {
   state = {
-    routes: false,
-    airports: false,
+    showRoutes: false,
+    routes: [],
+    showAirports: false,
+    airports: airportsList,
     country: countryList[0].value,
     measure: measures[0].value,
     year: yearsList[0].value
   };
 
   componentDidMount() {
-    setMap();
+    // setMap();
   }
 
   onChangeCountry(data) {
@@ -53,38 +57,53 @@ class App extends Component {
   }
 
   drawRoutes() {
-    const { routes, measure, country, year } = this.state;
-    if (routes) {
-      map.arc([]);
+    const { showRoutes, measure, country, year } = this.state;
+    if (showRoutes) {
+      // map.arc([]);
+      this.setState({ routes: [] });
     } else {
       // const routes=
       getRoutes({
         measure,
         country,
         year
-      }).then((d) => {
+      }).then((routes) => {
         // return d
-        map.arc(d);
+        this.setState({ routes });
+        // map.arc(routes);
       });
     }
-    this.setState({ routes: !routes });
+    this.setState({ showRoutes: !showRoutes });
   }
 
   drawAirports() {
-    const { airports } = this.state;
-    if (airports) {
-      map.bubbles([]);
+    const { showAirports } = this.state;
+    if (showAirports) {
+      this.setState({ airports: [] });
     } else {
-      map.bubbles(airportsList);
+      this.setState({ airports: airportsList });
     }
-    this.setState({ airports: !airports });
+    this.setState({ showAirports: !showAirports });
   }
 
   render() {
-    const { measure, country, year } = this.state;
+    const { airports, routes, measure, country, year } = this.state;
     return (
       <div>
-        <div id="container" />
+        <Datamap
+          responsive
+          geographyConfig={{
+            highlightOnHover: false,
+            popupOnHover: false
+          }}
+          bubbles={airports}
+          fills={{
+            defaultFill: '#ABDDA4',
+            ...colors
+          }}
+          arc={routes}
+        />
+
         <DropDown
           id="countries"
           value={country}

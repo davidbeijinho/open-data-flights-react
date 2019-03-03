@@ -1,15 +1,15 @@
-{
-  "extends": ["react-app", "airbnb", "prettier"],
-  "env": {
-    "browser": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
-  "rules": { 
-    "prettier/prettier": ["error"],
-    "arrow-parens":["error", "always"],
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
-  },
-  "plugins":["prettier"]
-}
+// {
+//   "extends": ["react-app", "airbnb", "prettier"],
+//   "env": {
+//     "browser": true
+//   },
+//   "parserOptions": {
+//     "ecmaVersion": 6
+//   },
+//   "rules": { 
+//     "prettier/prettier": ["error"],
+//     "arrow-parens":["error", "always"],
+//     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+//   },
+//   "plugins":["prettier"]
+// }
