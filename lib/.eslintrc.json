@@ -1,11 +1,14 @@
 {
-  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "extends": ["airbnb", "prettier", "plugin:node/recommended", "plugin:import/errors", "plugin:import/warnings"],
   "env": {
     "node": true
-    
   },
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "rules": { "arrow-parens": 2 }
+  "rules": { 
+    "prettier/prettier": ["error"],
+    "arrow-parens":["error", "always"]
+  },
+  "plugins":["prettier", "import"]
 }
