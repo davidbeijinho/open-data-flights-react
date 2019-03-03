@@ -8,7 +8,9 @@
   },
   "rules": { 
     "prettier/prettier": ["error"],
-    "arrow-parens":["error", "always"]
+    "arrow-parens":["error", "always"],
+    "import/extensions": ["error", "always"]
+
   },
   "plugins":["prettier", "import"]
 }
