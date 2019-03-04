@@ -22,8 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-data/processed/
-data/downloaded/
-data/raw/
-data/airports/
-data/countries/
+/data/processed/
+/data/downloaded/
+/data/raw/
+/data/airports/
+/data/countries/
