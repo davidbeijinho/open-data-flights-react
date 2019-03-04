@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-// import Datamap from 'datamaps';
-
 import Datamap from './components/Datamap';
-
 import DropDown from './components/DropDown';
 import countryList from './lib/countries';
 import yearsList from './lib/years';
