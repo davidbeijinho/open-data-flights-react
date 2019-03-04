@@ -38,7 +38,7 @@
     "copyAirportsData": "cpy 'data/airports/filtred-airports.json' 'build/data/airports/'",
     "copyCountriesData": "cpy 'data/countries/filtred-countries.json' 'build/data/countries/'",
     "copyData": "npm run deleteBuildData && npm run copyRoutesData && npm run copyAirportsData && npm run copyCountriesData",
-    "predeploy": "npm run buildData && npm run copyData && npm run build",
+    "predeploy": "npm run buildData && npm run build && npm run copyData",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
