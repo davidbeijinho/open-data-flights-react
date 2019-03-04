@@ -2,6 +2,7 @@
   "name": "open-data-flights-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://davidbeijinho.github.io/open-data-flights-react",
   "dependencies": {
     "JSONStream": "^1.3.5",
     "csv-parse": "^4.3.3",
@@ -16,6 +17,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "event-stream": "^4.0.1",
+    "gh-pages": "^2.0.1",
     "lodash.clonedeep": "^4.5.0",
     "lodash.uniq": "^4.5.0",
     "lodash.uniqby": "^4.7.0",
@@ -29,6 +31,8 @@
     "winston": "^3.2.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
