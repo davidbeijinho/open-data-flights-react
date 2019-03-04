@@ -1,0 +1,62 @@
+[
+  {
+    "id": "PAS_BRD",
+    "value": "PAS_BRD",
+    "label": "Passengers on board "
+  },
+  {
+    "id": "PAS_BRD_ARR",
+    "value": "PAS_BRD_ARR",
+    "label": " Passengers on board (arrivals)"
+  },
+  {
+    "id": "PAS_BRD_DEP",
+    "value": "PAS_BRD_DEP",
+    "label": " Passengers on board (departures)"
+  },
+  {
+    "id": "PAS_CRD",
+    "value": "PAS_CRD",
+    "label": "Passengers carried"
+  },
+  {
+    "id": "PAS_CRD_ARR",
+    "value": "PAS_CRD_ARR",
+    "label": " Passengers carried (arrival)"
+  },
+  {
+    "id": "PAS_CRD_DEP",
+    "value": "PAS_CRD_DEP",
+    "label": " Passengers carried (departures) "
+  },
+  {
+    "id": "ST_PAS",
+    "value": "ST_PAS",
+    "label": " Passengers seats available"
+  },
+  {
+    "id": "ST_PAS_ARR",
+    "value": "ST_PAS_ARR",
+    "label": "Passengers seats available (arrivals) "
+  },
+  {
+    "id": "ST_PAS_DEP",
+    "value": "ST_PAS_DEP",
+    "label": "Passengers seats available (departures) "
+  },
+  {
+    "id": "CAF_PAS",
+    "value": "CAF_PAS",
+    "label": "Commercial passenger air flights"
+  },
+  {
+    "id": "CAF_PAS_ARR",
+    "value": "CAF_PAS_ARR",
+    "label": " Commercial passenger air flights (arrivals)"
+  },
+  {
+    "id": "CAF_PAS_DEP",
+    "value": "CAF_PAS_DEP",
+    "label": "Commercial passenger air flights (departures)"
+  }
+]
