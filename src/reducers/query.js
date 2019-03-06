@@ -2,7 +2,7 @@ import { SET_MEASURE, SET_YEAR, SET_COUNTRY } from '../actions/actionTypes';
 
 const initialState = {
   measure: 'PAS_BRD',
-  year: '2000',
+  year: '2001',
   country: 'PT'
 };
 

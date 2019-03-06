@@ -12,7 +12,7 @@ function App() {
     <Router>
       <React.Fragment>
         <Menu />
-        <Route path="/" exact component={MainPage} />
+        <Route path="/" component={MainPage} />
         <Route path="/map/" component={MapPage} />
         <Route path="/data/" component={TablePage} />
       </React.Fragment>
