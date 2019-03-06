@@ -11,7 +11,7 @@
     "arrow-parens":["error", "always"],
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "import/extensions": ["error", "ignorePackages"],
-    "jsx-a11y/label-has-for": ["never"],
+    "jsx-a11y/label-has-for": [0],
     "jsx-a11y/label-has-associated-control": ["error"]
   },
   "plugins":["prettier", "import"]
