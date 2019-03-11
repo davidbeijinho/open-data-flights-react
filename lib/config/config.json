@@ -33,9 +33,15 @@
     "missingFileName": "./data/airports/missing-airports.json"
   },
   "filtredCountries": {
-    "filtredAirportsFileName": "./data/airports/filtred-airports.json",
+    "sourceFileName": "./data/airports/filtred-airports.json",
     "countriesFileName": "./data/countries/all-countries.json",
     "filtredFileName": "./data/countries/filtred-countries.json",
-    "missingFileName": "./data/countries/missing-countries.json"
+    "missingFileName": "./data/countries/missing-filtred-countries.json"
+  },
+  "activeCountries": {
+    "sourceFileName": "./lib/config/selected-countries.json",
+    "countriesFileName": "./data/countries/all-countries.json",
+    "filtredFileName": "./data/countries/active-countries.json",
+    "missingFileName": "./data/countries/missing-active-countries.json"
   }
 }

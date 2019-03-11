@@ -1,36 +1,138 @@
 [
-  "BE",
-  "BG",
-  "CZ",
-  "DK",
-  "DE",
-  "EE",
-  "IE",
-  "EL",
-  "ES",
-  "FR",
-  "HR",
-  "IT",
-  "CY",
-  "LV",
-  "LT",
-  "LU",
-  "HU",
-  "MT",
-  "NL",
-  "AT",
-  "PL",
-  "PT",
-  "RO",
-  "SI",
-  "SK",
-  "FI",
-  "SE",
-  "UK",
-  "IS",
-  "NO",
-  "CH",
-  "ME",
-  "MK",
-  "TR"
+  {
+    "downloadCode": "BE",
+    "iso_country": "BE"
+  },
+  {
+    "downloadCode": "BG",
+    "iso_country": "BG"
+  },
+  {
+    "downloadCode": "CZ",
+    "iso_country": "CZ"
+  },
+  {
+    "downloadCode": "DK",
+    "iso_country": "DK"
+  },
+  {
+    "downloadCode": "DE",
+    "iso_country": "DE"
+  },
+  {
+    "downloadCode": "EE",
+    "iso_country": "EE"
+  },
+  {
+    "downloadCode": "IE",
+    "iso_country": "IE"
+  },
+  {
+    "downloadCode": "EL",
+    "iso_country": "GR"
+  },
+  {
+    "downloadCode": "ES",
+    "iso_country": "ES"
+  },
+  {
+    "downloadCode": "FR",
+    "iso_country": "FR"
+  },
+  {
+    "downloadCode": "HR",
+    "iso_country": "HR"
+  },
+  {
+    "downloadCode": "IT",
+    "iso_country": "IT"
+  },
+  {
+    "downloadCode": "CY",
+    "iso_country": "CY"
+  },
+  {
+    "downloadCode": "LV",
+    "iso_country": "LV"
+  },
+  {
+    "downloadCode": "LT",
+    "iso_country": "LT"
+  },
+  {
+    "downloadCode": "LU",
+    "iso_country": "LU"
+  },
+  {
+    "downloadCode": "HU",
+    "iso_country": "HU"
+  },
+  {
+    "downloadCode": "MT",
+    "iso_country": "MT"
+  },
+  {
+    "downloadCode": "NL",
+    "iso_country": "NL"
+  },
+  {
+    "downloadCode": "AT",
+    "iso_country": "AT"
+  },
+  {
+    "downloadCode": "PL",
+    "iso_country": "PL"
+  },
+  {
+    "downloadCode": "PT",
+    "iso_country": "PT"
+  },
+  {
+    "downloadCode": "RO",
+    "iso_country": "RO"
+  },
+  {
+    "downloadCode": "SI",
+    "iso_country": "SI"
+  },
+  {
+    "downloadCode": "SK",
+    "iso_country": "SK"
+  },
+  {
+    "downloadCode": "FI",
+    "iso_country": "FI"
+  },
+  {
+    "downloadCode": "SE",
+    "iso_country": "SE"
+  },
+  {
+    "downloadCode": "UK",
+    "iso_country": "GB"
+  },
+  {
+    "downloadCode": "IS",
+    "iso_country": "IS"
+  },
+  {
+    "downloadCode": "NO",
+    "iso_country": "NO"
+  },
+  {
+    "downloadCode": "CH",
+    "iso_country": "CH"
+  },
+  {
+    "downloadCode": "ME",
+    "iso_country": "ME"
+  },
+  {
+    "downloadCode": "MK",
+    "iso_country": "MK"
+  },
+  {
+    "downloadCode": "TR",
+    "iso_country": "TR"
+  }
 ]
