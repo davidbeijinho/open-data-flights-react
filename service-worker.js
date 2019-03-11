@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/open-data-flights-react/precache-manifest.388f354053fbe2b610bcc0572aa6b234.js"
+  "/open-data-flights-react/precache-manifest.da8f16b8ef444e94e8a06510e3b82684.js"
 );
 
 workbox.clientsClaim();
