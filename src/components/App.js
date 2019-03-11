@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import TablePage from './components/TablePage.js';
-import MainPage from './components/MainPage.js';
-import MapPage from './components/MapPage.js';
-import Menu from './components/Menu.js';
+import TablePage from './TablePage.js';
+import MainPage from './MainPage.js';
+import MapPage from './MapPage.js';
+import Menu from './Menu.js';
 
 import './App.css';
 
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <React.Fragment>
         <Menu />
-        <Route path="/" component={MainPage} />
+        <Route exact path="/" component={MainPage} />
         <Route path="/map/" component={MapPage} />
         <Route path="/data/" component={TablePage} />
       </React.Fragment>

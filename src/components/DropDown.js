@@ -1,6 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const Option = ({ id, value, label }) => (
+  <option key={id} value={value}>
+    {label}
+  </option>
+);
+
+Option.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired
+};
+
 const DropDown = ({ id, label, onUpdate, list, value }) => (
   <React.Fragment>
     <label htmlFor={id}>{label}</label>
@@ -11,13 +23,9 @@ const DropDown = ({ id, label, onUpdate, list, value }) => (
         onUpdate(e.target.value);
       }}
     >
-      {list.map((item) => {
-        return (
-          <option key={item.id} value={item.value}>
-            {item.label}
-          </option>
-        );
-      })}
+      {list.map((option) => (
+        <Option key={option.id} {...option} />
+      ))}
     </select>
   </React.Fragment>
 );

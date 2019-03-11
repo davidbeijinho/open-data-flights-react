@@ -11,14 +11,14 @@ const getNavClass = (state) => {
 };
 
 const getIconClass = (state) => {
-  return state ? 'mySidenav-icon change' : 'mySidenav-icon';
+  return state ? 'sidenav-icon active' : 'sidenav-icon';
 };
 
 function Menu(props) {
   const { open, onToggleNav, onCloseNav } = props;
   return (
     <div>
-      <div id="mySidenav" className={getNavClass(open)}>
+      <div className={getNavClass(open)}>
         <Link onClick={onCloseNav} to="/">
           Home
         </Link>

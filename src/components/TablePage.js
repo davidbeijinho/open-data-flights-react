@@ -6,23 +6,32 @@ import PropTypes from 'prop-types';
 import ReactTable from 'react-table';
 import DropDown from './DropDown';
 import countryList from '../lib/countries';
-import yearsList from '../lib/years';
 import measures from '../config/measures.json';
 import { setMeasure, setYear, setCountry } from '../actions/queryActions';
 import { fetchRoutesIfNeeded } from '../actions/routeActions';
 
 import 'react-table/react-table.css';
+import Radio from './Radio';
 
-function getColumns(routes) {
+function getColumns(routes, year, onChangeYear) {
   let baseCollums = [];
   if (routes[0]) {
     const whiteList = ['arrival', 'departure', 'tra_meas', 'unit'];
     baseCollums = uniq(routes.map((v) => Object.keys(v)).flat())
+      .sort()
       .map((v) => {
         if (whiteList.indexOf(v) === -1) {
           return {
-            Header: v,
-            accessor: v
+            Header: () => (
+              <Radio
+                value={v}
+                checked={year === v}
+                name="measure"
+                onUpdate={onChangeYear}
+              />
+            ),
+            accessor: v,
+            Cell: (row) => <span>{row.value ? row.value : 0}</span>
           };
         }
         return false;
@@ -31,30 +40,48 @@ function getColumns(routes) {
   }
   return [
     {
-      Header: 'Arrival country',
-      accessor: 'arrival.country'
+      Header: 'Departure',
+      columns: [
+        // {
+        //   Header: 'Country',
+        //   accessor: 'departure.country'
+        // },
+        {
+          Header: 'Airport',
+          accessor: 'departure.airport'
+        }
+      ]
     },
     {
-      Header: 'Arrival airport',
-      accessor: 'arrival.airport'
+      Header: 'Arrival',
+      columns: [
+        {
+          Header: 'Country',
+          accessor: 'arrival.country'
+        },
+        {
+          Header: 'Airport',
+          accessor: 'arrival.airport'
+        }
+      ]
     },
     {
-      Header: 'Departure country',
-      accessor: 'departure.country'
+      Header: 'Info',
+      columns: [
+        // {
+        //   Header: 'Measure',
+        //   accessor: 'tra_meas'
+        // },
+        {
+          Header: 'Unit',
+          accessor: 'unit'
+        }
+      ]
     },
     {
-      Header: 'Departure airport',
-      accessor: 'departure.airport'
-    },
-    {
-      Header: 'Measure',
-      accessor: 'tra_meas'
-    },
-    {
-      Header: 'Unit',
-      accessor: 'unit'
-    },
-    ...baseCollums
+      Header: 'Years',
+      columns: [...baseCollums]
+    }
   ];
 }
 
@@ -79,13 +106,13 @@ function TablePage(props) {
           list={countryList}
           onUpdate={onChangeCountry}
         />
-        <DropDown
+        {/* <DropDown
           id="years"
           value={year}
           label="select year"
           list={yearsList}
           onUpdate={onChangeYear}
-        />
+        /> */}
         <DropDown
           id="measures"
           value={measure}
@@ -101,7 +128,10 @@ function TablePage(props) {
         </button>
       </div>
       {routes.length ? (
-        <ReactTable data={routes} columns={getColumns(routes)} />
+        <ReactTable
+          data={routes}
+          columns={getColumns(routes, year, onChangeYear)}
+        />
       ) : null}
     </div>
   );
@@ -132,5 +162,19 @@ TablePage.propTypes = {
   onLoadRoutesIfNeeded: PropTypes.func.isRequired,
   country: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
-  measure: PropTypes.string.isRequired
+  measure: PropTypes.string.isRequired,
+  routes: PropTypes.arrayOf(
+    PropTypes.shape({
+      unit: PropTypes.string.isRequired,
+      tra_meas: PropTypes.string.isRequired,
+      arrival: PropTypes.shape({
+        airport: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired
+      }).isRequired,
+      depaurute: PropTypes.shape({
+        airport: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired
+      }).isRequired
+    }).isRequired
+  ).isRequired
 };
