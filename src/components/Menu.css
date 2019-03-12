@@ -7,12 +7,12 @@
     background-color: black;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: transform 0.5s;
-    right: 0;
+    transition: transform 350ms;
+    right: -250px;
 }
 
 .sidenav.open {
-    transform: translateX(250px);
+    transform: translateX(-250px);
 }
 
 .sidenav a {
@@ -63,19 +63,17 @@
     height: 5px;
     background-color: red;
     margin: 6px 0;
-    transition: 0.4s;
+    transition: transform 350ms;
 }
 
 .active .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 .active .bar2 {
-    opacity: 0;
+   opacity: 0;
 }
 
 .active .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
